@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#123b35">
+  <link rel="icon" type="image/png" href="nabesk-mark.png">
   <meta name="description" content="NABESK Comprehensive College — a secondary school in Buea, Cameroon. Contact the school for current admissions and programme information.">
   <title>NABESK Comprehensive College | Buea, Cameroon</title>
   <style>
@@ -30,7 +31,8 @@
     .site-header { position: relative; z-index: 2; background: var(--paper); border-bottom: 1px solid var(--line); }
     .nav { max-width: 1160px; margin: auto; padding: 19px 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { display: flex; align-items: center; gap: 12px; color: var(--forest); text-decoration: none; }
-    .brand-mark { width: 42px; height: 42px; border-radius: 13px 13px 13px 4px; background: var(--forest); display: grid; place-items: center; color: var(--gold); font-family: var(--serif); font-size: 1.1rem; font-weight: 700; }
+    .brand-mark { width: 46px; height: 46px; border-radius: 13px 13px 13px 4px; display: grid; place-items: center; overflow: hidden; }
+    .brand-mark img { width: 100%; height: 100%; display: block; object-fit: cover; mix-blend-mode: multiply; }
     .brand-name { display: block; font-weight: 800; letter-spacing: .12em; font-size: .94rem; line-height: 1.1; }
     .brand-sub { display: block; margin-top: 4px; color: var(--muted); font-size: .66rem; letter-spacing: .11em; text-transform: uppercase; }
     .nav-links { display: flex; align-items: center; gap: 30px; }
@@ -147,7 +149,7 @@
   <header class="site-header">
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="#top" aria-label="NABESK Comprehensive College home">
-        <span class="brand-mark" aria-hidden="true">N</span>
+        <span class="brand-mark" aria-hidden="true"><img src="nabesk-mark.png" alt=""></span>
         <span><span class="brand-name">NABESK</span><span class="brand-sub">Comprehensive College</span></span>
       </a>
       <div class="nav-links">
