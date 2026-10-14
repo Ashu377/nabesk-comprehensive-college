@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123b35">
+  <meta name="description" content="NABESK Comprehensive College — a secondary school in Buea, Cameroon. Contact the school for current admissions and programme information.">
+  <title>NABESK Comprehensive College | Buea, Cameroon</title>
+  <style>
+    :root {
+      --forest: #123b35;
+      --forest-deep: #0b2925;
+      --green: #1f6253;
+      --mint: #dcece2;
+      --cream: #f7f4eb;
+      --paper: #fffdf8;
+      --gold: #e3b65e;
+      --ink: #1b2a27;
+      --muted: #64716b;
+      --line: rgba(18, 59, 53, .14);
+      --serif: Georgia, 'Times New Roman', serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); line-height: 1.6; }
+    a { color: inherit; }
+    .topline { background: var(--forest-deep); color: #ecf3ed; font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }
+    .topline-inner { max-width: 1160px; margin: auto; padding: 9px 28px; display: flex; justify-content: space-between; gap: 16px; }
+    .site-header { position: relative; z-index: 2; background: var(--paper); border-bottom: 1px solid var(--line); }
+    .nav { max-width: 1160px; margin: auto; padding: 19px 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; color: var(--forest); text-decoration: none; }
+    .brand-mark { width: 42px; height: 42px; border-radius: 13px 13px 13px 4px; background: var(--forest); display: grid; place-items: center; color: var(--gold); font-family: var(--serif); font-size: 1.1rem; font-weight: 700; }
+    .brand-name { display: block; font-weight: 800; letter-spacing: .12em; font-size: .94rem; line-height: 1.1; }
+    .brand-sub { display: block; margin-top: 4px; color: var(--muted); font-size: .66rem; letter-spacing: .11em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 30px; }
+    .nav-links a { text-decoration: none; color: #42534c; font-size: .9rem; font-weight: 600; }
+    .nav-links a:hover { color: var(--green); }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 21px; border-radius: 4px 16px 4px 16px; background: var(--gold); color: var(--forest-deep); text-decoration: none; font-weight: 750; transition: transform .18s ease, background .18s ease; }
+    .button:hover { transform: translateY(-2px); background: #edc777; }
+    .button-dark { background: var(--forest); color: white; }
+    .button-dark:hover { background: var(--green); }
+    .arrow { font-size: 1.1em; }
+    .hero { overflow: hidden; position: relative; background: var(--forest); color: white; }
+    .hero::before { content: ''; position: absolute; width: 540px; height: 540px; border: 1px solid rgba(255,255,255,.12); border-radius: 50%; right: -115px; top: -230px; box-shadow: 0 0 0 58px rgba(255,255,255,.025), 0 0 0 118px rgba(255,255,255,.02); }
+    .hero-inner { min-height: 540px; max-width: 1160px; margin: auto; padding: 76px 28px 72px; display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 36px; position: relative; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--gold); font-size: .76rem; font-weight: 750; letter-spacing: .15em; text-transform: uppercase; }
+    .eyebrow::before { content: ''; height: 1px; width: 28px; background: currentColor; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 640px; margin: 17px 0 20px; font-family: var(--serif); font-size: clamp(3rem, 6vw, 5.6rem); font-weight: 500; letter-spacing: -.045em; line-height: .99; }
+    h1 span { color: var(--gold); font-style: italic; }
+    .hero-copy { max-width: 510px; color: #d5e3da; font-size: 1.08rem; }
+    .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 17px; margin-top: 29px; }
+    .text-link { color: #f4f5ed; text-decoration: none; font-size: .92rem; font-weight: 650; }
+    .text-link span { padding-left: 5px; color: var(--gold); }
+    .hero-art { min-height: 350px; display: flex; align-items: center; justify-content: center; position: relative; }
+    .art-frame { width: min(100%, 430px); aspect-ratio: 1.05; position: relative; overflow: hidden; border-radius: 48% 48% 13px 13px; background: #e8d6ad; }
+    .sun { position: absolute; width: 116px; height: 116px; border-radius: 50%; background: var(--gold); right: 54px; top: 48px; opacity: .95; }
+    .hill { position: absolute; width: 125%; height: 47%; bottom: -20%; left: -12%; border-radius: 50% 50% 0 0; background: #a6c5a2; transform: rotate(-7deg); }
+    .hill-two { position: absolute; width: 115%; height: 38%; bottom: -14%; left: 16%; border-radius: 50% 50% 0 0; background: #547f68; transform: rotate(9deg); }
+    .school { position: absolute; bottom: 22%; left: 50%; transform: translateX(-50%); width: 63%; height: 40%; background: #fff9e9; box-shadow: 0 8px 0 rgba(18,59,53,.15); }
+    .school::before { content: ''; position: absolute; top: -48px; left: -8%; width: 116%; height: 54px; background: var(--forest); clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+    .school::after { content: ''; position: absolute; width: 20%; height: 70%; bottom: 0; left: 40%; background: #d4a65a; }
+    .window { position: absolute; width: 14%; height: 24%; top: 26%; background: #7ca18b; border: 3px solid #e5d4b0; }
+    .window.one { left: 12%; } .window.two { left: 29%; } .window.three { right: 29%; } .window.four { right: 12%; }
+    .art-caption { position: absolute; bottom: 19px; right: 20px; color: var(--forest-deep); font-size: .68rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
+    .hero-note { position: absolute; left: -7px; bottom: 32px; padding: 14px 18px; background: var(--paper); color: var(--forest); box-shadow: 0 12px 30px rgba(0,0,0,.16); font-family: var(--serif); font-size: 1rem; transform: rotate(-3deg); }
+    .hero-note small { display: block; margin-bottom: 2px; color: var(--muted); font-family: var(--sans); font-size: .62rem; letter-spacing: .12em; text-transform: uppercase; }
+    .facts { background: var(--cream); }
+    .facts-inner { max-width: 1160px; margin: auto; padding: 0 28px; display: grid; grid-template-columns: repeat(3, 1fr); }
+    .fact { padding: 24px 26px; border-left: 1px solid var(--line); }
+    .fact:last-child { border-right: 1px solid var(--line); }
+    .fact-label { color: var(--muted); font-size: .69rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .fact strong { display: block; margin-top: 5px; color: var(--forest); font-family: var(--serif); font-size: 1.25rem; font-weight: 500; }
+    .section { max-width: 1160px; margin: auto; padding: 100px 28px; }
+    .section-head { max-width: 700px; margin-bottom: 44px; }
+    .section-kicker { color: var(--green); font-size: .75rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    h2 { margin: 12px 0 16px; color: var(--forest); font-family: var(--serif); font-size: clamp(2.3rem, 4vw, 3.65rem); font-weight: 500; letter-spacing: -.035em; line-height: 1.08; }
+    .section-intro { max-width: 620px; color: var(--muted); font-size: 1.04rem; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 66px; align-items: start; }
+    .about-copy p { color: var(--muted); }
+    .note-box { margin-top: 26px; padding: 21px 23px; background: var(--mint); border-left: 3px solid var(--green); color: var(--forest); font-size: .94rem; }
+    .note-box strong { display: block; margin-bottom: 4px; }
+    .highlights { display: grid; gap: 12px; }
+    .highlight { display: grid; grid-template-columns: 50px 1fr; gap: 18px; padding: 20px; border: 1px solid var(--line); background: #fff; }
+    .highlight-icon { width: 50px; height: 50px; display: grid; place-items: center; background: var(--cream); color: var(--green); border-radius: 50%; font-size: 1.15rem; }
+    .highlight h3 { margin: 1px 0 4px; color: var(--forest); font-size: 1rem; }
+    .highlight p { margin: 0; color: var(--muted); font-size: .88rem; }
+    .contact-band { background: var(--cream); }
+    .contact-inner { max-width: 1160px; margin: auto; padding: 78px 28px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 38px; }
+    .contact-inner h2 { max-width: 650px; margin: 10px 0 12px; }
+    .contact-inner p { max-width: 620px; margin: 0; color: var(--muted); }
+    footer { background: var(--forest-deep); color: #e2ece5; }
+    .footer-inner { max-width: 1160px; margin: auto; padding: 30px 28px; display: flex; justify-content: space-between; align-items: center; gap: 22px; }
+    .footer-brand { font-weight: 800; letter-spacing: .13em; }
+    .footer-meta { color: #aebeb4; font-size: .8rem; }
+    .footer-inner a { color: var(--gold); text-decoration: none; font-size: .85rem; font-weight: 700; }
+    .disclaimer { max-width: 1160px; margin: auto; padding: 0 28px 22px; color: #9db1a5; font-size: .74rem; }
+    @media (max-width: 800px) {
+      .nav-links { gap: 16px; }
+      .nav-links a:not(.button) { display: none; }
+      .hero-inner { grid-template-columns: 1fr; padding-top: 60px; gap: 22px; }
+      .hero-art { min-height: 300px; }
+      .art-frame { width: min(78%, 390px); }
+      .hero-note { left: 2%; }
+      .about-grid { grid-template-columns: 1fr; gap: 32px; }
+      .contact-inner { grid-template-columns: 1fr; gap: 24px; }
+      .contact-inner .button { justify-self: start; }
+    }
+    @media (max-width: 560px) {
+      .topline-inner { padding: 8px 18px; font-size: .64rem; }
+      .topline-inner span:last-child { display: none; }
+      .nav { padding: 14px 18px; }
+      .brand-mark { width: 38px; height: 38px; }
+      .brand-name { font-size: .82rem; }
+      .brand-sub { font-size: .58rem; }
+      .nav-links .button { min-height: 41px; padding: 0 13px; font-size: .78rem; }
+      .hero-inner { padding: 51px 20px 42px; }
+      h1 { font-size: clamp(2.9rem, 14vw, 4.1rem); }
+      .hero-copy { font-size: 1rem; }
+      .hero-art { min-height: 265px; }
+      .art-frame { width: 82%; }
+      .hero-note { bottom: 18px; font-size: .87rem; }
+      .facts-inner { padding: 0 18px; grid-template-columns: 1fr; }
+      .fact, .fact:last-child { padding: 15px 18px; border: 0; border-bottom: 1px solid var(--line); }
+      .fact strong { font-size: 1.12rem; }
+      .section { padding: 68px 20px; }
+      .highlight { padding: 16px; grid-template-columns: 44px 1fr; gap: 13px; }
+      .highlight-icon { width: 44px; height: 44px; }
+      .contact-inner { padding: 62px 20px; }
+      .footer-inner { padding: 25px 20px; align-items: flex-start; flex-direction: column; }
+      .disclaimer { padding: 0 20px 20px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <div class="topline"><div class="topline-inner"><span>Buea · Southwest Region · Cameroon</span><span>Learning with purpose</span></div></div>
+  <header class="site-header">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="NABESK Comprehensive College home">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span><span class="brand-name">NABESK</span><span class="brand-sub">Comprehensive College</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#learning">Learning</a>
+        <a class="button button-dark" href="https://www.facebook.com/p/Nabesk-comprehensive-college-buea-100067209173001/" target="_blank" rel="noopener noreferrer">Contact the school <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow">NABESK Comprehensive College</span>
+          <h1 id="hero-title">A place to learn, <span>grow</span> &amp; go further.</h1>
+          <p class="hero-copy">A secondary school in Buea, Cameroon, welcoming learners to build knowledge and prepare for what comes next.</p>
+          <div class="hero-actions">
+            <a class="button" href="https://www.facebook.com/p/Nabesk-comprehensive-college-buea-100067209173001/" target="_blank" rel="noopener noreferrer">Ask the school <span class="arrow" aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#about">Discover NABESK <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <div class="hero-art" role="img" aria-label="Illustration of a school building in a green landscape">
+          <div class="art-frame"><div class="sun"></div><div class="hill"></div><div class="hill-two"></div><div class="school"><i class="window one"></i><i class="window two"></i><i class="window three"></i><i class="window four"></i></div><div class="art-caption">Learn · Grow · Succeed</div></div>
+          <div class="hero-note"><small>Rooted in Buea</small>Ready for tomorrow.</div>
+        </div>
+      </div>
+    </section>
+    <section class="facts" aria-label="School overview">
+      <div class="facts-inner">
+        <div class="fact"><span class="fact-label">School level</span><strong>Secondary education</strong></div>
+        <div class="fact"><span class="fact-label">Located in</span><strong>Buea, Cameroon</strong></div>
+        <div class="fact"><span class="fact-label">School community</span><strong>Focused on learning</strong></div>
+      </div>
+    </section>
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="about-grid">
+        <div class="about-copy">
+          <span class="section-kicker">Welcome to NABESK</span>
+          <h2 id="about-title">Education that opens doors.</h2>
+          <p>NABESK Comprehensive College is a secondary school in Buea, in Cameroon’s Southwest Region. Its public school page highlights a teaching community that includes GCE markers and examiners.</p>
+          <p>Every learner’s path is different. For the latest information about admissions, classes, school fees, or the academic calendar, please contact the school directly.</p>
+          <div class="note-box"><strong>Looking for current school information?</strong>Get the latest details directly from NABESK rather than relying on outdated third-party listings.</div>
+        </div>
+        <div class="highlights" id="learning">
+          <article class="highlight"><span class="highlight-icon" aria-hidden="true">✦</span><div><h3>A secondary school in Buea</h3><p>NABESK Comprehensive College serves the school community in Buea, Cameroon.</p></div></article>
+          <article class="highlight"><span class="highlight-icon" aria-hidden="true">◎</span><div><h3>GCE experience</h3><p>The school’s public page describes its teaching community as including GCE markers and examiners.</p></div></article>
+          <article class="highlight"><span class="highlight-icon" aria-hidden="true">↗</span><div><h3>Ask about your next step</h3><p>Contact the school for accurate details about programmes, admissions, and fees.</p></div></article>
+        </div>
+      </div>
+    </section>
+    <section class="contact-band" aria-labelledby="contact-title">
+      <div class="contact-inner">
+        <div><span class="section-kicker">Get in touch</span><h2 id="contact-title">Have a question for NABESK?</h2><p>For current admissions, programme, and fee information, reach out to the school through its public Facebook page.</p></div>
+        <a class="button button-dark" href="https://www.facebook.com/p/Nabesk-comprehensive-college-buea-100067209173001/" target="_blank" rel="noopener noreferrer">Visit the school page <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-inner"><div><div class="footer-brand">NABESK</div><div class="footer-meta">Comprehensive College · Buea, Cameroon</div></div><a href="https://www.facebook.com/p/Nabesk-comprehensive-college-buea-100067209173001/" target="_blank" rel="noopener noreferrer">School Facebook page ↗</a></div>
+    <div class="disclaimer">School information on this page is limited to publicly available details. Contact NABESK directly to verify current admissions, programmes, and fees.</div>
+  </footer>
+</body>
+</html>
