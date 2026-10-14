@@ -90,6 +90,11 @@
     .contact-inner { max-width: 1160px; margin: auto; padding: 78px 28px; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 38px; }
     .contact-inner h2 { max-width: 650px; margin: 10px 0 12px; }
     .contact-inner p { max-width: 620px; margin: 0; color: var(--muted); }
+    .map-details { max-width: 1160px; margin: auto; padding: 0 28px 64px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--line); }
+    .map-detail { min-height: 100px; padding: 18px 17px; background: var(--paper); }
+    .map-detail span { display: block; color: var(--muted); font-size: .67rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .map-detail strong { display: block; margin-top: 8px; color: var(--forest); font-size: .92rem; line-height: 1.35; }
+    .map-note { max-width: 1160px; margin: -46px auto 0; padding: 0 28px 44px; color: var(--muted); font-size: .76rem; }
     footer { background: var(--forest-deep); color: #e2ece5; }
     .footer-inner { max-width: 1160px; margin: auto; padding: 30px 28px; display: flex; justify-content: space-between; align-items: center; gap: 22px; }
     .footer-brand { font-weight: 800; letter-spacing: .13em; }
@@ -127,7 +132,10 @@
       .section { padding: 68px 20px; }
       .highlight { padding: 16px; grid-template-columns: 44px 1fr; gap: 13px; }
       .highlight-icon { width: 44px; height: 44px; }
-      .contact-inner { padding: 62px 20px; }
+      .contact-inner { padding: 62px 20px 30px; }
+      .map-details { padding: 0 20px 22px; grid-template-columns: repeat(2, 1fr); }
+      .map-detail:last-child { grid-column: 1 / -1; }
+      .map-note { margin: 0; padding: 0 20px 34px; }
       .footer-inner { padding: 25px 20px; align-items: flex-start; flex-direction: column; }
       .disclaimer { padding: 0 20px 20px; }
     }
@@ -192,9 +200,17 @@
     </section>
     <section class="contact-band" aria-labelledby="contact-title">
       <div class="contact-inner">
-        <div><span class="section-kicker">Get in touch</span><h2 id="contact-title">Have a question for NABESK?</h2><p>Google Maps lists “Nabesk college” at 5748+5FM, Bundoma, Buea. Check the map pin and confirm the exact location with the school before visiting. For current admissions, programme, and fee information, reach out through the school’s public Facebook page.</p></div>
-        <div style="display:flex;flex-wrap:wrap;gap:12px"><a class="button button-dark" href="https://maps.google.com/?cid=17443136709867354651&amp;g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA" target="_blank" rel="noopener noreferrer">Open Google Maps <span class="arrow" aria-hidden="true">↗</span></a><a class="button" href="https://www.facebook.com/p/Nabesk-comprehensive-college-buea-100067209173001/" target="_blank" rel="noopener noreferrer">Visit the school page <span class="arrow" aria-hidden="true">↗</span></a></div>
+        <div><span class="section-kicker">Get in touch</span><h2 id="contact-title">Have a question for NABESK?</h2><p>For current admissions, programme, and fee information, reach out through the school’s public Facebook page.</p></div>
+        <a class="button button-dark" href="https://www.facebook.com/p/Nabesk-comprehensive-college-buea-100067209173001/" target="_blank" rel="noopener noreferrer">Visit the school page <span class="arrow" aria-hidden="true">↗</span></a>
       </div>
+      <div class="map-details" aria-label="Google Maps listing details">
+        <div class="map-detail"><span>Listing name</span><strong>Nabesk college</strong></div>
+        <div class="map-detail"><span>Address</span><strong>5748+5FM, Bundoma, Buea</strong></div>
+        <div class="map-detail"><span>Listing status</span><strong>Marked operational</strong></div>
+        <div class="map-detail"><span>Google rating</span><strong>4.0 / 5 · 1 rating</strong></div>
+        <div class="map-detail"><span>Map pin coordinates</span><strong>4.15505, 9.26694</strong></div>
+      </div>
+      <p class="map-note">Map listing details are shown as reported by Google Maps; confirm the location and current details with the school before visiting.</p>
     </section>
   </main>
   <footer>
